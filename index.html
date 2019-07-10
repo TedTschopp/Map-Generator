@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Random Map Generator</title>
+    <!-- scripts -->
+    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/data.js"></script>
+    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/input.js"></script>
+    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/output.js"></script>
+    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/getHeightMap.js"></script>
+    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/simulateWater.js"></script>
+    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/cell.js"></script>
+    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/random.js"></script>
+    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/utilities.js"></script>
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="./worldgenerator.js - Geofiction.js_files/mystyle.css">
+</head>
+
+<body>
+    <div id="clear"></div>
+    <div id="content">
+        <h1>Random Map Generator</h1>
+        <p>Generates random maps with realistic topography.</p>
+        <!-- settings -->
+        size:<select id="size">
+            <option>256</option>
+            <option>512</option>
+            <option>1024</option>
+            <option>2048</option>
+        </select>
+        <br>
+        land:
+        <select id="land">
+            <option>height color</option>
+            <option>height mono</option>
+            <option>simple</option>
+            <option>none</option>
+        </select>
+        shading:
+        <select id="shading">
+            <option>yes</option>
+            <option>no</option>
+        </select>
+        sea:
+        <select id="sea">
+            <option>depth</option>
+            <option>simple</option>
+            <option>none</option>
+        </select>
+        river:
+        <select id="river">
+            <option>none</option>
+            <option>major</option>
+            <option>all</option>
+        </select>
+        <br>
+        <!-- buttons -->
+        <input type="button" value="new map" onclick="onClickRandom()">
+        <input type="button" value="map with seed" onclick="onClickSeed()">
+        <input type="text" size="9" id="seed">
+        <input type="button" value="start water" onclick="onClickStart()">
+        <br>
+        <input type="button" value="redraw" onclick="onClickRedraw()">
+        <br>
+        <!-- message -->
+    </div>
+    </div>
+    <!-- canvas -->
+    <div id="canvasdiv">
+        <canvas id="canvas" width="256" height="256">
+        </canvas>
+    </div>
+</body>
+
+</html>
