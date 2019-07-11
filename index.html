@@ -4,16 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Random Map Generator</title>
     <!-- scripts -->
-    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/data.js"></script>
-    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/input.js"></script>
-    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/output.js"></script>
-    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/getHeightMap.js"></script>
-    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/simulateWater.js"></script>
-    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/cell.js"></script>
-    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/random.js"></script>
-    <script type="text/javascript" src="./worldgenerator.js - Geofiction.js_files/utilities.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/input.js"></script>
+    <script type="text/javascript" src="js/output.js"></script>
+    <script type="text/javascript" src="js/getHeightMap.js"></script>
+    <script type="text/javascript" src="js/simulateWater.js"></script>
+    <script type="text/javascript" src="js/cell.js"></script>
+    <script type="text/javascript" src="js/random.js"></script>
+    <script type="text/javascript" src="js/utilities.js"></script>
     <!-- style -->
-    <link rel="stylesheet" type="text/css" href="./worldgenerator.js - Geofiction.js_files/mystyle.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </head>
 
 <body>
@@ -22,9 +22,10 @@
         <h1>Random Map Generator</h1>
         <p>Generates random maps with realistic topography.</p>
         <!-- settings -->
-        size:<select id="size">
+        size:
+        <select id="size">
             <option>256</option>
-            <option>512</option>
+            <option selected="selected">512</option>
             <option>1024</option>
             <option>2048</option>
         </select>
@@ -57,11 +58,12 @@
         <!-- buttons -->
         <input type="button" value="new map" onclick="onClickRandom()">
         <input type="button" value="map with seed" onclick="onClickSeed()">
-        <input type="text" size="9" id="seed">
+        <input type="text" size="9" id="seed" value="471175809">
         <input type="button" value="start water" onclick="onClickStart()">
         <br>
         <input type="button" value="redraw" onclick="onClickRedraw()">
         <br>
+        <div id="message"></div>
         <!-- message -->
     </div>
     </div>
