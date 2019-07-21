@@ -186,7 +186,7 @@ var simulateWater = (() => {
 						heap.add(d, getT(d));
 					}
 					//stop spreading
-					if (sand == 0) return true;
+					//if (sand == 0) return true;
 					if (!heap.ifAny()) return false;
 				}
 			};
